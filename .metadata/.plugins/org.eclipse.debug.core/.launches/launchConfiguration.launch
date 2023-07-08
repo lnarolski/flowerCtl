@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.espressif.idf.launch.serial.launchConfigurationType">
+    <booleanAttribute key="DFU" value="false"/>
+    <booleanAttribute key="FLASH_OVER_JTAG" value="false"/>
+    <stringAttribute key="cmake.generator" value="Ninja"/>
+    <stringAttribute key="com.espressif.idf.debug.gdbjtag.openocd.jtagBoard" value="ESP-WROVER-KIT 1.8V"/>
+    <stringAttribute key="com.espressif.idf.debug.gdbjtag.openocd.jtagFlashArguments" value=""/>
+    <stringAttribute key="com.espressif.idf.debug.gdbjtag.openocd.jtagFlashVoltage" value="default"/>
+    <stringAttribute key="com.espressif.idf.debug.gdbjtag.openocd.jtagTarget" value="esp32"/>
+    <stringAttribute key="com.espressif.idf.launch.serial.core.dfuFlashArguments" value="${IDF_PYTHON_ENV_PATH} ${IDF_PY} dfu-flash"/>
+    <stringAttribute key="com.espressif.idf.launch.serial.core.serialFlashArguments" value="${IDF_PY} -p ${serial_port} flash"/>
+    <stringAttribute key="org.eclipse.cdt.launch.ATTR_LOCATION" value="${IDF_PYTHON_ENV_PATH}"/>
+    <stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="BlinkTest"/>
+    <stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value="org.eclipse.cdt.core.default.config.325056871"/>
+    <stringAttribute key="org.eclipse.cdt.launch.WORKING_DIRECTORY" value="${workspace_loc:BlinkTest}"/>
+    <booleanAttribute key="org.eclipse.debug.core.ATTR_FORCE_SYSTEM_CONSOLE_ENCODING" value="false"/>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+        <listEntry value="/BlinkTest"/>
+    </listAttribute>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+        <listEntry value="4"/>
+    </listAttribute>
+</launchConfiguration>
