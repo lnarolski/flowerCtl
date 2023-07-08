@@ -2225,3 +2225,6 @@ java.lang.StackOverflowError
 
 !ENTRY com.espressif.idf.core 1 0 2023-07-08 15:41:24.735
 !MESSAGE C:\Users\Lukasz\.espressif\frameworks\esp-idf-v5.0.2\tools\idf.py -p COM3 flash
+
+!ENTRY com.espressif.idf.core 1 0 2023-07-08 16:04:19.743
+!MESSAGE C:\Users\Lukasz\.espressif\frameworks\esp-idf-v5.0.2\tools\idf.py -p COM3 flash
