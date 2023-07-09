@@ -21,7 +21,7 @@ const static char *TAG = "EXAMPLE";
 ---------------------------------------------------------------*/
 //ADC1 Channels
 #if CONFIG_IDF_TARGET_ESP32
-#define EXAMPLE_ADC1_CHAN0          ADC_CHANNEL_4
+#define EXAMPLE_ADC1_CHAN0          ADC_CHANNEL_0
 #define EXAMPLE_ADC1_CHAN1          ADC_CHANNEL_5
 #else
 #define EXAMPLE_ADC1_CHAN0          ADC_CHANNEL_2
@@ -33,7 +33,7 @@ const static char *TAG = "EXAMPLE";
  * On ESP32C3, ADC2 is no longer supported, due to its HW limitation.
  * Search for errata on espressif website for more details.
  */
-#define EXAMPLE_USE_ADC2            1
+//#define EXAMPLE_USE_ADC2            1
 #endif
 
 #if EXAMPLE_USE_ADC2
@@ -93,13 +93,13 @@ void app_main(void)
 #endif  //#if EXAMPLE_USE_ADC2
 
     while (1) {
-//        ESP_ERROR_CHECK(adc_oneshot_read(adc1_handle, EXAMPLE_ADC1_CHAN0, &adc_raw[0][0]));
-//        ESP_LOGI(TAG, "ADC%d Channel[%d] Raw Data: %d", ADC_UNIT_1 + 1, EXAMPLE_ADC1_CHAN0, adc_raw[0][0]);
-//        if (do_calibration1) {
-//            ESP_ERROR_CHECK(adc_cali_raw_to_voltage(adc1_cali_handle, adc_raw[0][0], &voltage[0][0]));
-//            ESP_LOGI(TAG, "ADC%d Channel[%d] Cali Voltage: %d mV", ADC_UNIT_1 + 1, EXAMPLE_ADC1_CHAN0, voltage[0][0]);
-//        }
-//        vTaskDelay(pdMS_TO_TICKS(1000));
+        ESP_ERROR_CHECK(adc_oneshot_read(adc1_handle, EXAMPLE_ADC1_CHAN0, &adc_raw[0][0]));
+        ESP_LOGI(TAG, "ADC%d Channel[%d] Raw Data: %d", ADC_UNIT_1 + 1, EXAMPLE_ADC1_CHAN0, adc_raw[0][0]);
+        if (do_calibration1) {
+            ESP_ERROR_CHECK(adc_cali_raw_to_voltage(adc1_cali_handle, adc_raw[0][0], &voltage[0][0]));
+            ESP_LOGI(TAG, "ADC%d Channel[%d] Cali Voltage: %d mV", ADC_UNIT_1 + 1, EXAMPLE_ADC1_CHAN0, voltage[0][0]);
+        }
+        vTaskDelay(pdMS_TO_TICKS(1000));
 
 //        ESP_ERROR_CHECK(adc_oneshot_read(adc1_handle, EXAMPLE_ADC1_CHAN1, &adc_raw[0][1]));
 //        ESP_LOGI(TAG, "ADC%d Channel[%d] Raw Data: %d", ADC_UNIT_1 + 1, EXAMPLE_ADC1_CHAN1, adc_raw[0][1]);
