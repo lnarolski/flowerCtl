@@ -2,3 +2,6 @@
 1688816896937	Rename resource 'flowerCtl'
 1688821168534	Delete resource 'continuous_read'
 1688821932967	Delete resource 'AnalogReadTest'
+1688907099880	Delete resource 'flowerCtl/README.md'
+1688922662359	Delete resource 'flowerCtl/main/adcMeasurement'
+1688923024725	Delete resource 'flowerCtl/main/adcMeasurement.h'
